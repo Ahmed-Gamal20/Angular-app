@@ -1,0 +1,11 @@
+<div class="card position-relative" >
+    <img [src]="item.imgUrl" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{item.title}}</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+      @if (item.onSale) {
+        <p class="position-absolute top-0 end-0 bg-warning text-white p-1 ">onSale</p>
+      }
+    </div>
+  </div>
