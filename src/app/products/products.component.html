@@ -1,0 +1,58 @@
+<!--  <h1>my name is {{x.name}}</h1>
+<h3>i am {{x.age}} years old</h3>
+<h5>my id id {{x.id}}</h5> -->
+<!-- <ng-template #hanksh><h1>no data</h1></ng-template>
+<table [class]="isDarkMode?'bg-light':'bg-danger'" class="table text-light" *ngIf="info.length>0;else hanksh">
+   <thead>
+    <th>index</th>
+    <th>name</th>
+    <th>age</th>
+    <th>id</th>
+   </thead>
+    <tbody>
+         @for (x of info; let i=index) { 
+   <tr  *ngFor="let x of info;let i = index;let isOdd =odd">
+    <td> {{isOdd}} </td>
+    <td> {{x.name}} </td>
+    <td> {{x.age}} </td>
+    <td> {{x.id}} </td> 
+    </tr>
+} 
+  
+</table>
+<h1 [class]="isDarkMode?'bg-dark text-light':'bg-danger '">hello</h1>
+
+<button (click)="changebg()" class="btn btn-info">click</button> -->
+
+
+
+
+<!-- @for and *ngFor  -->
+<h1 class="text-center">products</h1>
+<div class="containe">
+    <div class="row">
+        @for (x of meal; track $index;let i=$odd) {
+        <div class="col-md-4">
+            <div class="position-relative border border-rounded border-2 border-primary overFlow-hidden m-2" [class.bg-danger]="i">
+                <img alt="" [src]="x.image_url" class="w-100 covar">
+                <div class="p-2">
+                    <h5>publisher: {{x.publisher}}</h5>
+                <h6>title: {{x.title}}</h6>
+                <p class="position-absolute top-0 end-0 p-1 bg-warning">{{x.social_rank}}</p>
+                </div>
+            </div>
+            
+        
+        </div>
+    }
+    @empty {
+            <h1>sorry we have not any data</h1>
+    }
+    </div>
+</div>
+
+
+<!-- @if and @else, *ngIf and ngElse -->
+
+
+
