@@ -1,0 +1,36 @@
+<div id="carouselExampleControls" class="carousel slide p-3" data-bs-ride="carousel">
+    <!-- @for (x of mealImg.slice(1, 6); track $index) { -->
+    <div  class="carousel-inner">
+       
+      <div *ngFor="let x of mealImg.slice(0,5)"  class="carousel-item active">
+        <img [src]="x.image_url" class=" w-100" alt="...">
+      </div>
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+<!-- } -->
+
+  </div>
+
+
+<!-- 
+  <div>Some tags before</div>
+  <owl-carousel-o [options]="customOptions">
+
+    <ng-container *ngFor="let x of mealImg.slice(0,5)">
+      <ng-template carouselSlide [id]="slide.id">
+        <img [src]="x.image_url">
+      </ng-template>
+    </ng-container>
+
+  </owl-carousel-o>
+  <div>Some tags after</div>
+
+ -->
