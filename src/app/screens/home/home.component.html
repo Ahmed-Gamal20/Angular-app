@@ -1,0 +1,29 @@
+@if (product.length==0) {
+<app-loader></app-loader>
+}
+@else {
+    <app-slider [proImg]="product"></app-slider>
+
+}
+<h1 class="add-jew p-4 m-3 border border-1 border-danger w-25 bg-primary">Top Jewelery</h1>
+<div class="container">
+    <div class="row m-2 top-3">
+      
+        @for (x of product; track $index) {
+            @if (x.category=="jewelery") {
+        <div class="col-md-4 ">
+            <div class="m-1 border border-1 border-danger position-relative">
+            <img [src]="x.image" alt="" class="w-100 rounded ">
+            <div class="m-1 p-1 ">
+                <h6>title: {{x.title}}</h6>
+                <p>category:{{x.price}}</p>
+                <p class="position-absolute top-0 end-0 bg-warning m-1 rounded">{{x.rating.rate}}</p>
+            </div>
+            </div>
+            </div>
+        }
+    }
+    </div>
+</div>
+
+<!-- <app-products [unProduct]="unHome"><h1>{{unHome}}</h1></app-products> -->
